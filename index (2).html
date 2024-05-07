@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Most Successful Communist Countries</title>
+    <style>
+        /* You can add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 10 Most Successful Communist Countries</h1>
+    </header>
+    <main id="countryList">
+        <!-- This is where the list of countries will be displayed -->
+    </main>
+
+    <script>
+        // JavaScript code to populate the list of countries
+        document.addEventListener("DOMContentLoaded", function() {
+            const countries = [
+                { name: "China", GDP: "14.7 trillion USD (2020)", population: "1.4 billion" },
+                { name: "Vietnam", GDP: "340 billion USD (2020)", population: "97 million" },
+                { name: "North Korea", GDP: "2 USD (2020)", population: "92" },
+                // Add more countries here
+            ];
+
+            const countryList = document.getElementById("countryList");
+
+            countries.forEach(country => {
+                const countryCard = document.createElement("div");
+                countryCard.classList.add("country-card");
+                countryCard.innerHTML = `
+                    <h2>${country.name}</h2>
+                    <p><strong>GDP:</strong> ${country.GDP}</p>
+                    <p><strong>Population:</strong> ${country.population}</p>
+                `;
+                countryList.appendChild(countryCard);
+            });
+        });
+    </script>
+</body>
+</html>
